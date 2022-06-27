@@ -1,0 +1,51 @@
+﻿@model finalproject.Models.Admins
+
+@{
+    ViewBag.Title = "DetailsAdmin";
+}
+
+<h2>DetailsAdmin</h2>
+
+<div>
+    <h4>Admins</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Adm_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adm_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adm_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adm_Email)
+        </dd>
+
+        
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adm_Number1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adm_Number1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adm_Number2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adm_Number2)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditAdmin") 
+</p>

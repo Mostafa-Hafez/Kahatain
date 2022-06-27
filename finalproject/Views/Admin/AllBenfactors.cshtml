@@ -1,0 +1,60 @@
+﻿@model IEnumerable<finalproject.Models.Benefactor>
+
+@{
+    ViewBag.Title = "AllBenfactors";
+}
+
+<h2>AllBenfactors</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ben_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ben_Number1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ben_Number2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ben_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ben_Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ben_Address)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ben_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ben_Number1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ben_Number2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ben_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ben_Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ben_Address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditBenf", new { id=item.Ben_Id }) |
+            @Html.ActionLink("Details", "DetailsBenf", new { id=item.Ben_Id }) |
+            @Html.ActionLink("", "/","")
+        </td>
+    </tr>
+}
+
+</table>

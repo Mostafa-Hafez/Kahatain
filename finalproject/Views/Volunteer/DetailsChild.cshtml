@@ -1,0 +1,110 @@
+﻿@model finalproject.Models.Child
+
+@{
+    ViewBag.Title = "DetailsChild";
+}
+
+<h2>DetailsChild</h2>
+
+<div>
+    <h4>Child</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ch_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ch_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ch_PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ch_PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ch_Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ch_Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ch_DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ch_DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ch_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ch_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ch_Govrnate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ch_Govrnate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ch_PlaceBorn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ch_PlaceBorn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ch_FatherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ch_FatherName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ch_MotherName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ch_MotherName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ch_MotherDOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ch_MotherDOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ch_DateFatherDeath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ch_DateFatherDeath)
+        </dd>
+
+        
+
+        
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditChild", new { id = Model.Ch_ID }) |
+   
+</p>

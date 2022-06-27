@@ -1,0 +1,89 @@
+﻿@model IEnumerable<finalproject.Models.Volunteer>
+
+@{
+    ViewBag.Title = "AllVolunteers";
+}
+
+<h2>AllVolunteers</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vol_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vol_UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vol_Govrnate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vol_Number1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vol_Number2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vol_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vol_email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vol_Job)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vol_Place)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vol_Skills)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Vol_Certificates)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vol_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vol_ConfirmPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vol_Govrnate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vol_Number1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vol_Number2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vol_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vol_email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vol_Job)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vol_Place)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vol_Skills)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vol_Certificates)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditVol", "Volunteer",new { id=item.Vol_ID },null) |
+            @Html.ActionLink("Details", "DetailsVol", "Volunteer", new { id=item.Vol_ID },null) |
+            @Html.ActionLink("/", "", "")//new { id=item.Vol_ID })
+        </td>
+    </tr>
+}
+
+</table>

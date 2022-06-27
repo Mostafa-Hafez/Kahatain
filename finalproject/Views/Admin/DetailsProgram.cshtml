@@ -1,0 +1,34 @@
+﻿@model finalproject.Models.Programs
+
+@{
+    ViewBag.Title = "DetailsProgram";
+}
+
+<h2>DetailsProgram</h2>
+
+<div>
+    <h4>Programs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pr_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pr_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pr_Descrition)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pr_Descrition)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditProgram", new { id = Model.Pr_ID }) |
+    
+</p>

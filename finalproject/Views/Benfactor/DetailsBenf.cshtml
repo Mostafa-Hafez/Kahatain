@@ -1,0 +1,64 @@
+﻿@model finalproject.Models.Benefactor
+
+@{
+    ViewBag.Title = "DetailsBenf";
+}
+
+<h2>DetailsBenf</h2>
+
+<div>
+    <h4>Benefactor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ben_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ben_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ben_Number1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ben_Number1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ben_Number2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ben_Number2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ben_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ben_Email)
+        </dd>
+            @Html.DisplayNameFor(model => model.Ben_Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ben_Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ben_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ben_Address)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditBenf") |
+    @Html.ActionLink("Cancel", "")
+</p>

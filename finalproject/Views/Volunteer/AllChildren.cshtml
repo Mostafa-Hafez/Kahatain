@@ -1,0 +1,99 @@
+﻿@model IEnumerable<finalproject.Models.Child>
+
+@{
+    ViewBag.Title = "AllChildren";
+}
+
+<h2>AllChildren</h2>
+
+<p>
+    @Html.ActionLink("Create New", "NewChild")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ch_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ch_PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ch_Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ch_DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ch_Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ch_Govrnate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ch_PlaceBorn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ch_FatherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ch_MotherName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ch_MotherDOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ch_DateFatherDeath)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Ch_Image)
+        </th>*@
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ch_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ch_PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ch_Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ch_DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ch_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ch_Govrnate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ch_PlaceBorn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ch_FatherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ch_MotherName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ch_MotherDOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ch_DateFatherDeath)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Ch_Image)
+        </td>*@
+        <td>
+            @Html.ActionLink("Edit", "EditChild", new { id=item.Ch_ID }) |
+            @Html.ActionLink("Details", "DetailsChild", new { id=item.Ch_ID }) |
+            @Html.ActionLink("Delete", "/")  @*, new { id=item.Ch_ID })*@
+        </td>
+    </tr>
+}
+
+</table>

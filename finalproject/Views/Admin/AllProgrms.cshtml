@@ -1,0 +1,39 @@
+﻿@model IEnumerable<finalproject.Models.Programs>
+
+@{
+    ViewBag.Title = "AllProgrms";
+}
+
+<h2>AllProgrms</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pr_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pr_Descrition)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pr_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pr_Descrition)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditProgram", new { id=item.Pr_ID }) |
+            @Html.ActionLink("Details", "DetailsProgram", new { id=item.Pr_ID }) |
+            @Html.ActionLink("Delete", "/") 
+        </td>
+    </tr>
+}
+
+</table>
